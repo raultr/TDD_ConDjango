@@ -30,7 +30,7 @@ class NewVisitorTest(LiveServerTestCase):
 		inputbox.send_keys(Keys.ENTER)
 		
 		edith_list_url = self.browser.current_url
-		self.assertRegex(edith_list_url, '/lists/.+') #
+		self.assertRegex(edith_list_url, '/lists/.+') 
 		self.check_for_row_in_list_table('1: Buy peacock feathers')
 
 
@@ -44,8 +44,8 @@ class NewVisitorTest(LiveServerTestCase):
 
 		#self.assertTrue(any(row.text == '1: Buy peacock feathers' for row in rows), 
 		#	'New to-do item did not appear in table -- its text was:\n%s' %(table.text,))
-		self.assertIn('1: Buy peacock feathers', [row.text for row in rows])
-		self.assertIn('2: Use peacock feathers to make a fly', [row.text for row in rows])
+		#self.assertIn('1: Buy peacock feathers', [row.text for row in rows])
+		#self.assertIn('2: Use peacock feathers to make a fly', [row.text for row in rows])
 		
 
 		self.check_for_row_in_list_table('1: Buy peacock feathers')
